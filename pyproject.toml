@@ -9,8 +9,8 @@ packages = [{include = "embedchain-streamlit-app"}]
 
 
 [tool.poetry.dependencies]
-python = "^3.10"
-embedchain = "^0.0.52"
+python = ">=3.9,<3.9.7 || > 3.9.7,<3.13"
+embedchain = "^0.1.102"
 streamlit = "^1.26.0"
 
 

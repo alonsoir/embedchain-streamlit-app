@@ -155,3 +155,12 @@ credentials.json
 token.json
 
 /db/
+
+.env
+.env.example
+poetry.toml
+poetry.lock
+docker-compose.yml
+.gitignore
+README.md
+*.py
