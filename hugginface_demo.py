@@ -14,6 +14,7 @@ def clean_home():
   print("db_path deleted.")
 
 
+clean_home()
 
 load_dotenv()
 config = {

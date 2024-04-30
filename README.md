@@ -13,6 +13,8 @@
 - A ChatBot using embedchain and Streamlit
 - Docker Support with Optimisation Cache etc
 - Deployment on Streamlit Public Cloud
+- Updated to latest embedchain version, actual is 0.1.102
+- Added hugginface_demo
 
 This repo contains an `main.py` file which has a template for a chatbot implementation.
 
@@ -55,7 +57,25 @@ poetry shell
 
 ```bash
 streamlit run demo_app/main.py 
+
 ```
+3.1 Run some scripts:
+
+```bash
+python -m hugginface_demo
+```
+
+possible errors
+-------------------
+
+It is possible that this exception happens:
+    
+    chromadb.errors.InvalidDimensionException: Embedding dimension 768 does not match collection dimensionality 1536. 
+    This is commonly a side-effect when an embedding function, different from the one used to add the embeddings, 
+    is used to retrieve an embedding from the database.
+
+    Actually i dont know how to maintain both chromedb instances, so i have to some cleaning after and before running 
+    hugginface script.
 
 Run App using Docker
 --------------------
@@ -97,3 +117,7 @@ As `embedchain-streamlit-app:latest` is a template project with minimal example.
 
 This is a template App, when using with openai_api key, you will be charged a nominal fee depending
 on number of prompts etc.
+
+Rename .env.example to .env, add your enviroment keys, ask for permission in order to access mistral.
+
+https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2
