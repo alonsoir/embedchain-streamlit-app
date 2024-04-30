@@ -6,6 +6,10 @@
 
 [https://youtu.be/yJAWB13FhYQ](https://youtu.be/yJAWB13FhYQ)
 
+## Disclaimer 
+
+- Thank you to amjadraza for him original work. This repository try to update some dependencies and add more examples.
+- @alonso_isidoro
 
 ## 🔧 Features
 
