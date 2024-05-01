@@ -27,7 +27,6 @@ This repo contains an `main.py` file which has a template for a chatbot implemen
 
 Select the number of Data Sources from slider and enter the details.
 
-
 | Source    | URL |
 | -------- | ------- |
 | youtube  | https://www.youtube.com/watch?v=3qHkcs3kG44   |
@@ -61,20 +60,18 @@ poetry shell
 3. Run the Streamlit server🚀
 
 ```bash
-streamlit run demo_app/main.py 
-
+  streamlit run demo_app/main.py 
 ```
 3.1 Run some scripts:
 
 ```bash
-python -m hugginface_demo
+  python -m hugginface_demo
 ```
 
-```
 3.2 (optional) Run make:
 
 ```bash
-make all
+    make all
 ```
 
 possible errors
@@ -97,7 +94,7 @@ https://medium.com/@albertazzir/blazing-fast-python-docker-builds-with-poetry-a7
 
 Build the docker container
 
-``docker  build . -t embedchain-streamlit-app:latest ``
+``docker build . -t embedchain-streamlit-app:latest ``
 
 To generate Image with `DOCKER_BUILDKIT`, follow below command
 
@@ -105,7 +102,7 @@ To generate Image with `DOCKER_BUILDKIT`, follow below command
 
 1. Run the docker container directly 
 
-``docker run -d --name embedchain-streamlit-app -p 8080:8080 embedchain-streamlit-app:latest ``
+``docker run -d --name embedchain-streamlit-app -p 8501:8501 embedchain-streamlit-app:latest ``
 
 2. Run the docker container using docker-compose (Recommended)
 
@@ -130,6 +127,7 @@ As `embedchain-streamlit-app:latest` is a template project with minimal example.
 This is a template App, when using with openai_api key, you will be charged a nominal fee depending
 on number of prompts etc.
 
-Rename .env.example to .env, add your enviroment keys, ask for permission in order to access mistral.
+Rename .env.example to .env, add your environment keys, ask for permission in order to access mistral, create your
+container with your credentials and run the app.
 
 https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2

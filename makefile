@@ -1,4 +1,4 @@
-all: setup install container-build container-run size
+all: setup container-build container-run size
 
 setup: requirements install_python install validate_python_libs
 
@@ -16,6 +16,7 @@ install_python:
 	pyenv install $$(cat .python-version) -s
 
 requirements:
+	which docker
 	which pyenv
 	which poetry
 
@@ -42,15 +43,12 @@ delete:
 
 size:
 	@echo "Size of Python virtual environment"
-	@du -sh $$(poetry run poetry env info --path 2>/dev/null)
-	@echo "Size of Huggingface model directory"
-	@du -sh $$HOME/.cache/huggingface/
+	@du -sh $(poetry run poetry env info --path 2>/dev/null)
 
 # Container targets ------------------------------------------
 
 CONTAINER_IMAGE=aironman/embedchain-streamlit-app:latest
 
-.PHONY: container-build
 # build the container image
 container-build:
 	@echo "Building container image"
