@@ -2,7 +2,7 @@
 name = "embedchain-streamlit-app"
 version = "0.1.0"
 description = "A template embedchain Streamlit App with Docker"
-authors = ["Amjad Raza"]
+authors = ["Amjad Raza","Alonso Isidoro"]
 license = "MIT"
 readme = "README.md"
 packages = [{include = "embedchain-streamlit-app"}]
