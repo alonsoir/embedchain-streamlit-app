@@ -5,6 +5,9 @@ setup: requirements install_python install validate_python_libs
 code:
 	poetry run code .
 
+pycharm:
+	poetry run pycharm .
+
 # run -------------------------------
 
 run:
