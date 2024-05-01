@@ -9,6 +9,7 @@
 ## Disclaimer 
 
 - Thank you to amjadraza for his original work. This repository try to update some dependencies and add more examples.
+- Thank you to vicenteherrera for his contributions to the repository, poetry, makefile, and docker improvements.
 - @alonso_isidoro
 
 ## 🔧 Features
@@ -67,6 +68,13 @@ streamlit run demo_app/main.py
 
 ```bash
 python -m hugginface_demo
+```
+
+```
+3.2 (optional) Run make:
+
+```bash
+make all
 ```
 
 possible errors

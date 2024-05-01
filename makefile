@@ -1,4 +1,4 @@
-all: install run size
+all: setup install container-build container-run size
 
 setup: requirements install_python install validate_python_libs
 
@@ -55,6 +55,5 @@ CONTAINER_IMAGE=aironman/embedchain-streamlit-app:latest
 container-build:
 	@echo "Building container image"
 	sudo docker buildx build . -f Dockerfile -t ${CONTAINER_IMAGE} --build-arg YOUR_HOME="$$HOME"
-
 container-run:
 	docker run -p 8501:8501 ${CONTAINER_IMAGE}
